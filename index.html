@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home - Mayandi Raja V</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+
+/* Animated gradient background */
+
+body{
+height:100vh;
+background:linear-gradient(270deg,#0f172a,#1e293b,#020617,#0ea5e9);
+background-size:600% 600%;
+animation:gradientMove 12s ease infinite;
+color:white;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Glass Navbar */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+/* Logo */
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#38bdf8;
+}
+
+/* Navbar Links */
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+position:relative;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+background:#38bdf8;
+left:0;
+bottom:-5px;
+transition:0.4s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* Hero Section */
+
+#home{
+height:85vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+/* Glass Hero Card */
+
+.hero-card{
+padding:40px;
+border-radius:15px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.2);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Profile Image Animation */
+
+.profile-img{
+width:170px;
+height:170px;
+border-radius:50%;
+border:4px solid #38bdf8;
+margin-bottom:20px;
+object-fit:cover;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0px);}
+}
+
+/* Heading */
+
+h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+/* Buttons */
+
+.btn{
+margin-top:15px;
+padding:12px 25px;
+background:#38bdf8;
+border:none;
+font-weight:bold;
+cursor:pointer;
+border-radius:8px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px #38bdf8;
+}
+
+.resume{
+background:#22c55e;
+}
+
+.resume:hover{
+box-shadow:0 0 15px #22c55e;
+}
+
+/* Social Icons */
+
+.social{
+margin-top:20px;
+}
+
+.social a{
+margin:0 10px;
+font-size:22px;
+color:#38bdf8;
+transition:0.3s;
+}
+
+.social a:hover{
+color:white;
+transform:scale(1.3);
+}
+
+</style>
+
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <div class="cursor"></div>
+
+<header>
+
+<div class="logo">Mayandi Raja</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="skills.html">Skills</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section id="home">
+
+<div class="hero-card" data-aos="zoom-in">
+
+<img src="profile.png" class="profile-img">
+
+<h1>Hello I'm <span id="typing"></span></h1>
+
+<p>Computer Science Student | Web Developer | Java Programmer</p>
+
+<button class="btn" onclick="hire()">Hire Me</button>
+
+<a href="resume.pdf" download>
+<button class="btn resume">Download Resume</button>
+</a>
+
+<div class="social">
+
+<a href="https://github.com/rajaviswa17jan2008-a11y"><i class="fab fa-github"></i></a>
+
+<a href="https://www.linkedin.com/in/mayandiraja"><i class="fab fa-linkedin"></i></a>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {"value":80},
+    "size": {"value":3},
+    "move": {"speed":2},
+    "line_linked": {"enable":true}
+  }
+});
+</script>
+
+</body>
+</html>
